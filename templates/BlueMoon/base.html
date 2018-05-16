@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+{% block head %}
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Blue Moon - Responsive Admin Dashboard{% endblock %}</title>
+        {% block meta %}{% endblock %}
+        {% block link %}{% endblock %}
+        {% block js %}{% endblock %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
+        <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
+        <meta name="author" content="Bootstrap Gallery" />
+        <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
+
+        <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
+        <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
+
+        <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
+        <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
+        <![endif]-->
+    </head>
+{% endblock %}
+
+{% block body %}
+    <body>
+        {% block body-js %}{% endblock %}
+
+        <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
+        <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
+    </body>
+{% endblock %}
+
+</html>
