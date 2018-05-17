@@ -1,27 +1,12 @@
-{% extends 'BlueMoon/base.html' %}{% load staticfiles %}
-  <head>
-    <title>Blue Moon - Responsive Admin Dashboard</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
-    <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
-    <meta name="author" content="Bootstrap Gallery" />
-    <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
-    
-    <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
-    <link href="{% static 'BlueMoon/css' %}/pricing.css" rel="stylesheet">
+{% extends 'BlueMoon/base.html' %}
+{% load staticfiles %}
 
-    <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
+{% block link %}
+    <link href="{% static 'BlueMoon/css/pricing.css' %}" rel="stylesheet">
+{% endblock %}
 
-    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
-      <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
-    <![endif]-->
-  </head>
-
-  <body>
+{% block body %}
+    <body>
 
     <!-- Header Start -->
     <header>
@@ -228,7 +213,7 @@
                  <li><a href="{% url 'pricing' %}">Pricing Plan</a></li>
                  <li><a href="{% url 'timeline' %}">Timeline</a></li>
               </ul>
-            </li>            
+            </li>
             <li class="hidden-sm">
               <a href="{% url 'media' %}">
                 <i class="fa fa-picture-o"></i>
@@ -467,30 +452,27 @@
     </div>
     <!-- Main Container end -->
 
-    <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
+    {% block body-js %}
+        <script src="{% static 'BlueMoon/js/modernizr.js' %}"></script>
+        <script src="{% static 'BlueMoon/js/pricing.js' %}"></script>
 
-    <script src="{% static 'BlueMoon/js' %}/modernizr.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/pricing.js"></script>
-    
-    <script src="{% static 'BlueMoon/js/menu.js' %}"></script>
-    <script type="text/javascript">
-      //ScrollUp
-      $(function () {
-        $.scrollUp({
-          scrollName: 'scrollUp', // Element ID
-          topDistance: '300', // Distance from top before showing element (px)
-          topSpeed: 300, // Speed back to top (ms)
-          animation: 'fade', // Fade, slide, none
-          animationInSpeed: 400, // Animation in speed (ms)
-          animationOutSpeed: 400, // Animation out speed (ms)
-          scrollText: 'Top', // Text for element
-          activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-        });
-      });
+        <script type="text/javascript">
+          //ScrollUp
+          $(function () {
+            $.scrollUp({
+              scrollName: 'scrollUp', // Element ID
+              topDistance: '300', // Distance from top before showing element (px)
+              topSpeed: 300, // Speed back to top (ms)
+              animation: 'fade', // Fade, slide, none
+              animationInSpeed: 400, // Animation in speed (ms)
+              animationOutSpeed: 400, // Animation out speed (ms)
+              scrollText: 'Top', // Text for element
+              activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            });
+          });
 
-    </script>
+        </script>
+    {% endblock %}
 
   </body>
-</html>
+{% endblock %}
