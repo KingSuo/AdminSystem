@@ -1,30 +1,12 @@
-{% extends 'BlueMoon/base.html' %}{% load staticfiles %}
-  <head>
-    <title>Blue Moon - Responsive Admin Dashboard</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
-    <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
-    <meta name="author" content="Bootstrap Gallery" />
-    <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
-    
-    <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
+{% extends 'BlueMoon/base.html' %}
+{% load staticfiles %}
 
-    <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
-    <!-- Important. For Theming change primary-color variable in main.css  -->
-
+{% block link %}
     <link href="{% static 'BlueMoon/css/alertify.core.css' %}" rel="stylesheet" id="toggleCSS">
+{% endblock %}
 
-    <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
-
-    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
-      <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
-    <![endif]-->
-  </head>
-
-  <body>
+{% block body %}
+    <body>
 
     <!-- Header Start -->
     <header>
@@ -283,7 +265,7 @@
 
         <!-- Dashboard Wrapper Start -->
         <div class="dashboard-wrapper">
-          
+
           <!-- Left Sidebar Start -->
           <div class="left-sidebar">
 
@@ -1143,7 +1125,7 @@
               </div>
             </div>
             <!-- Row End -->
-                                  
+
           </div>
           <!-- Left Sidebar End -->
 
@@ -1170,13 +1152,13 @@
                     <i class="fa fa-users fa-3x text-success"></i>
                   </span>
                   <h4 class="list-group-item-heading">831</h4>
-                  <p class="list-group-item-text">Friends</p>      
+                  <p class="list-group-item-text">Friends</p>
                 </a>
               </div>
             </div>
-            
+
             <hr class="hr-stylish-1">
-            
+
             <div class="wrapper">
               <div id="scrollbar">
                 <div class="scrollbar">
@@ -1434,9 +1416,9 @@
                 </div>
               </div>
             </div>
-            
+
             <hr class="hr-stylish-1">
-            
+
             <div class="wrapper">
               <div id="scrollbar-two">
                 <div class="scrollbar">
@@ -1619,120 +1601,118 @@
     </div>
     <!-- Main Container end -->
 
-    <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
+    {% block body-js %}
 
-    <script type="text/javascript" src="{% static 'BlueMoon/js' %}/alertify.min.js"></script>
+        <script type="text/javascript" src="{% static 'BlueMoon/js/alertify.min.js' %}"></script>
 
-    <!-- Sparkline JS -->
-    <script src="{% static 'BlueMoon/js/sparkline.js' %}"></script>
-    
-    <!-- Tiny Scrollbar JS -->
-    <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
+        <!-- Sparkline JS -->
+        <script src="{% static 'BlueMoon/js/sparkline.js' %}"></script>
 
-    <!-- Custom JS -->
-    <script src="{% static 'BlueMoon/js/menu.js' %}"></script>
-    
-    <script type="text/javascript">
+        <!-- Tiny Scrollbar JS -->
+        <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
 
-      //Tooltip
-      $('.btn').tooltip('hide');
+        <script type="text/javascript">
 
-      //Popover
-      $('.btn').popover('hide');
+          //Tooltip
+          $('.btn').tooltip('hide');
 
-      //Dropdown
-      $('.dropdown-toggle').dropdown();
+          //Popover
+          $('.btn').popover('hide');
 
-      //Tiny Scrollbar
-      $('#scrollbar').tinyscrollbar();
-      $('#scrollbar-two').tinyscrollbar();
+          //Dropdown
+          $('.dropdown-toggle').dropdown();
+
+          //Tiny Scrollbar
+          $('#scrollbar').tinyscrollbar();
+          $('#scrollbar-two').tinyscrollbar();
 
 
-      //Alertify JS
-      $ = function (id) {
-        return document.getElementById(id);
-      },
-      reset = function () {
-        $("toggleCSS").href = "css/alertify.core.css";
-        alertify.set({
-          labels: {
-            ok: "OK",
-            cancel: "Cancel"
+          //Alertify JS
+          $ = function (id) {
+            return document.getElementById(id);
           },
-          delay: 5000,
-          buttonReverse: false,
-          buttonFocus: "ok"
-        });
-      };
+          reset = function () {
+            $("toggleCSS").href = "css/alertify.core.css";
+            alertify.set({
+              labels: {
+                ok: "OK",
+                cancel: "Cancel"
+              },
+              delay: 5000,
+              buttonReverse: false,
+              buttonFocus: "ok"
+            });
+          };
 
-      // Standard Dialogs
-      $("alert").onclick = function () {
-        reset();
-        alertify.alert("This is an alert Dialog");
-        return false;
-      };
+          // Standard Dialogs
+          $("alert").onclick = function () {
+            reset();
+            alertify.alert("This is an alert Dialog");
+            return false;
+          };
 
-      $("confirm").onclick = function () {
-        reset();
-        alertify.confirm("This is a confirm dialog", function (e) {
-          if (e) {
-            alertify.success("You've clicked OK");
-          } else {
-            alertify.error("You've clicked Cancel");
-          }
-        });
-        return false;
-      };
+          $("confirm").onclick = function () {
+            reset();
+            alertify.confirm("This is a confirm dialog", function (e) {
+              if (e) {
+                alertify.success("You've clicked OK");
+              } else {
+                alertify.error("You've clicked Cancel");
+              }
+            });
+            return false;
+          };
 
-      $("prompt").onclick = function () {
-        reset();
-        alertify.prompt("This is a prompt dialog", function (e, str) {
-          if (e) {
-            alertify.success("You've clicked OK and typed: " + str);
-          } else {
-            alertify.error("You've clicked Cancel");
-          }
-        }, "Default Value");
-        return false;
-      };
+          $("prompt").onclick = function () {
+            reset();
+            alertify.prompt("This is a prompt dialog", function (e, str) {
+              if (e) {
+                alertify.success("You've clicked OK and typed: " + str);
+              } else {
+                alertify.error("You've clicked Cancel");
+              }
+            }, "Default Value");
+            return false;
+          };
 
-      // Standard Dialogs
-      $("notification").onclick = function () {
-        reset();
-        alertify.log("Standard log message");
-        return false;
-      };
+          // Standard Dialogs
+          $("notification").onclick = function () {
+            reset();
+            alertify.log("Standard log message");
+            return false;
+          };
 
-      $("success").onclick = function () {
-        reset();
-        alertify.success("Success log message");
-        return false;
-      };
+          $("success").onclick = function () {
+            reset();
+            alertify.success("Success log message");
+            return false;
+          };
 
-      $("error").onclick = function () {
-        reset();
-        alertify.error("Error log message");
-        return false;
-      };
+          $("error").onclick = function () {
+            reset();
+            alertify.error("Error log message");
+            return false;
+          };
 
-      // Custom Properties
-      $("delay").onclick = function () {
-        reset();
-        alertify.set({
-          delay: 10000
-        });
-        alertify.log("Hiding in 10 seconds");
-        return false;
-      };
+          // Custom Properties
+          $("delay").onclick = function () {
+            reset();
+            alertify.set({
+              delay: 10000
+            });
+            alertify.log("Hiding in 10 seconds");
+            return false;
+          };
 
-      $("forever").onclick = function () {
-        reset();
-        alertify.log("Will stay until clicked", "", 0);
-        return false;
-      };
-      //Alertfy End
-    </script>
+          $("forever").onclick = function () {
+            reset();
+            alertify.log("Will stay until clicked", "", 0);
+            return false;
+          };
+          //Alertfy End
+        </script>
+
+    {% endblock %}
 
   </body>
-</html>
+{% endblock %}
