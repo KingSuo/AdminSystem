@@ -1,0 +1,45 @@
+{% extends 'BlueMoon/base.html' %}
+{% load staticfiles %}
+{% block body %}
+    <body>
+
+    <!-- Main Container start -->
+    <div class="dashboard-container">
+
+      <div class="container">
+
+        <!-- Row Start -->
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-md-offset-4">
+
+            <div class="page-not-found center-align-text">
+              <div class="number">500</div>
+              <h3>
+                Internal Server Error.
+              </h3>
+              <p>
+                We are fixing it!
+                <br>
+                Please come back in a while.
+              </p>
+              <form>
+                <div class="input-group">
+                  <input type="text" class="form-control">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">Search</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <!-- Row End -->
+
+      </div>
+    </div>
+    <!-- Main Container end -->
+
+  </body>
+{% endblock %}
+
