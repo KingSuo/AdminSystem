@@ -1,27 +1,12 @@
-<!DOCTYPE html>{% load staticfiles %}<html>
-  <head>
-    <title>Blue Moon - Responsive Admin Dashboard</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
-    <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
-    <meta name="author" content="Bootstrap Gallery" />
-    <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
-    
-    <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
+{% extends 'BlueMoon/base.html' %}
+{% load staticfiles %}
+
+{% block link %}
     <link href="{% static 'BlueMoon/css/charts-graphs.css' %}" rel="stylesheet">
+{% endblock %}
 
-    <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
-
-    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
-      <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
-    <![endif]-->
-  </head>
-
-  <body>
+{% block body %}
+    <body>
 
     <!-- Header Start -->
     <header>
@@ -274,7 +259,7 @@
 
         <!-- Dashboard Wrapper Start -->
         <div class="dashboard-wrapper">
-          
+
           <!-- Left Sidebar Start -->
           <div class="left-sidebar">
 
@@ -460,7 +445,7 @@
 
           <!-- Right Sidebar Start -->
           <div class="right-sidebar">
-            
+
             <div class="wrapper">
               <div id="scrollbar">
                 <div class="scrollbar">
@@ -713,16 +698,16 @@
                           Mashups experiences plug
                         </a>
                       </div>
-                      
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <hr class="hr-stylish-1">
-            
+
             <div class="wrapper">
               <div id="scrollbar-two">
                 <div class="scrollbar">
@@ -885,9 +870,9 @@
                           Mashups experiences plug
                         </a>
                       </div>
-                      
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -908,63 +893,63 @@
     <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
     <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
-  
-    
-    <!-- Sparkline JS -->
-    <script src="{% static 'BlueMoon/js' %}/sparkline.js"></script>
-    
-    <!-- Tiny Scrollbar JS -->
-    <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
-    
-    <!-- Flot Charts -->
-    <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.orderBar.min.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.pie.min.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.stack.min.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.resize.min.js"></script>
 
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/line.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/area.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/stacked-area.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/vertical.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/horizontal.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/stacked-vertical.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/stacked-horizontal.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/rectangular-pie.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/realtime.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/pie.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/donut.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/flot/custom/scatter.js"></script>
 
-    <!-- Custom JS -->
-    <script src="{% static 'BlueMoon/js/menu.js' %}"></script>
-    
-    <script type="text/javascript">
-      //ScrollUp
-      $(function () {
-        $.scrollUp({
-          scrollName: 'scrollUp', // Element ID
-          topDistance: '300', // Distance from top before showing element (px)
-          topSpeed: 300, // Speed back to top (ms)
-          animation: 'fade', // Fade, slide, none
-          animationInSpeed: 400, // Animation in speed (ms)
-          animationOutSpeed: 400, // Animation out speed (ms)
-          scrollText: 'Top', // Text for element
-          activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-        });
-      });
+    {% block body-js %}
+        <!-- Sparkline JS -->
+        <script src="{% static 'BlueMoon/js/sparkline.js' %}"></script>
 
-      //Tooltip
-      $('a').tooltip('hide');
-      $('i').tooltip('hide');
+        <!-- Tiny Scrollbar JS -->
+        <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
 
-      //Tiny Scrollbar
-      $('#scrollbar').tinyscrollbar();
-      
-      $('#scrollbar-two').tinyscrollbar();
+        <!-- Flot Charts -->
+        <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.orderBar.min.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.pie.min.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.stack.min.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.tooltip.min.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.resize.min.js"></script>
 
-    </script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/line.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/area.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/stacked-area.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/vertical.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/horizontal.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/stacked-vertical.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/stacked-horizontal.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/rectangular-pie.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/realtime.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/pie.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/donut.js"></script>
+        <script src="{% static 'BlueMoon/js' %}/flot/custom/scatter.js"></script>
+
+        <script type="text/javascript">
+          //ScrollUp
+          $(function () {
+            $.scrollUp({
+              scrollName: 'scrollUp', // Element ID
+              topDistance: '300', // Distance from top before showing element (px)
+              topSpeed: 300, // Speed back to top (ms)
+              animation: 'fade', // Fade, slide, none
+              animationInSpeed: 400, // Animation in speed (ms)
+              animationOutSpeed: 400, // Animation out speed (ms)
+              scrollText: 'Top', // Text for element
+              activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            });
+          });
+
+          //Tooltip
+          $('a').tooltip('hide');
+          $('i').tooltip('hide');
+
+          //Tiny Scrollbar
+          $('#scrollbar').tinyscrollbar();
+
+          $('#scrollbar-two').tinyscrollbar();
+
+        </script>
+
+    {% endblock %
 
   </body>
-</html>
+{% endblock %}
