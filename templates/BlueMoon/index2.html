@@ -1,27 +1,13 @@
-{% extends 'BlueMoon/base.html' %}{% load staticfiles %}
-  <head>
-    <title>Blue Moon - Responsive Admin Dashboard</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
-    <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
-    <meta name="author" content="Bootstrap Gallery" />
-    <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
-    
-    <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
+{% extends 'BlueMoon/base.html' %}
+{% load staticfiles %}
+
+{% block link %}
     <link href="{% static 'BlueMoon/css/charts-graphs.css' %}" rel="stylesheet">
-
     <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
+{% endblock %}
 
-    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
-      <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
-    <![endif]-->
-  </head>
-
-  <body>
+{% block body %}
+    <body>
 
     <!-- Header Start -->
     <header>
@@ -271,10 +257,10 @@
 
         <!-- Dashboard Wrapper Start -->
         <div class="dashboard-wrapper">
-          
+
           <!-- Left Sidebar Start -->
           <div class="left-sidebar">
-            
+
             <!-- Row Start -->
             <div class="row">
               <div class="col-lg-12 col-md-12">
@@ -453,7 +439,7 @@
                 <div class="widget">
                   <div class="widget-header">
                     <div class="title">
-                      Mailbox 
+                      Mailbox
                       <span class="mini-title"><a id="mailbox">Inspired by gmail</a></span>
                     </div>
                     <div class="tools pull-right">
@@ -575,7 +561,7 @@
                               <strong>
                                 Bitbucket
                               </strong>
-                              
+
                               <small class="info-fade">
                                 Technologies content deploy ROI
                               </small>
@@ -600,7 +586,7 @@
                               <strong>
                                 Verify your email
                               </strong>
-                              
+
                               <small class="info-fade">
                                 Less schemas seamless band
                               </small>
@@ -626,7 +612,7 @@
                                 Statement for December 2012
                               </strong>
                               <small class="info-fade">
-                                Models seize 
+                                Models seize
                               </small>
                             </td>
                             <td class="right-align-text hidden-phone">
@@ -713,7 +699,7 @@
                         <li class="new">
                           <input type="checkbox" id="1" />
                           <label for="1">
-                            Send flowers to Sandy 
+                            Send flowers to Sandy
                             <span class="date">Due Feb 14</span>
                           </label>
                         </li>
@@ -748,7 +734,7 @@
                         <li class="new">
                           <input type="checkbox" id="6" />
                           <label for="6">
-                            Take a photograph 
+                            Take a photograph
                             <span class="date">Due Jan 30</span>
                           </label>
                         </li>
@@ -772,7 +758,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="col-lg-6 col-md-6">
                 <div class="widget">
                   <div class="widget-header">
@@ -860,9 +846,9 @@
                           </ul>
                         </div>
                       </div>
-                      
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -986,7 +972,7 @@
                                   at Jan 09, 2013 01:19
                                 </span>
                                 <span class="body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
                                 </span>
                               </div>
                             </li>
@@ -1002,7 +988,7 @@
                                   at Jan 03, 2013 09:09
                                 </span>
                                 <span class="body">
-                                  Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                                  Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
                                 </span>
                               </div>
                             </li>
@@ -1018,7 +1004,7 @@
                                   at Jan 01, 2013 07:49
                                 </span>
                                 <span class="body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
                                 </span>
                               </div>
                             </li>
@@ -1034,7 +1020,7 @@
                                   at Dec 28, 2012 02:39
                                 </span>
                                 <span class="body">
-                                  Dnim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit,  
+                                  Dnim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit,
                                 </span>
                               </div>
                             </li>
@@ -1050,7 +1036,7 @@
                                   at Jan 09, 2013 01:19
                                 </span>
                                 <span class="body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
                                 </span>
                               </div>
                             </li>
@@ -1066,7 +1052,7 @@
                                   at Jan 03, 2013 09:09
                                 </span>
                                 <span class="body">
-                                  Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                                  Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
                                 </span>
                               </div>
                             </li>
@@ -1082,7 +1068,7 @@
                                   at Jan 01, 2013 07:49
                                 </span>
                                 <span class="body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
                                 </span>
                               </div>
                             </li>
@@ -1098,7 +1084,7 @@
                                   at Dec 28, 2012 02:39
                                 </span>
                                 <span class="body">
-                                  Dnim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit,  
+                                  Dnim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.Enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Anim pariatur cliche reprehenderit,
                                 </span>
                               </div>
                             </li>
@@ -1212,7 +1198,7 @@
 
           <!-- Right Sidebar Start -->
           <div class="right-sidebar">
-            
+
             <div class="wrapper">
               <ul class="stats">
                 <li>
@@ -1292,9 +1278,9 @@
                 </li>
               </ul>
             </div>
-            
+
             <hr class="hr-stylish-1">
-            
+
             <div class="wrapper">
               <div id="scrollbar">
                 <div class="scrollbar">
@@ -1547,16 +1533,16 @@
                           Mashups experiences plug
                         </a>
                       </div>
-                      
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <hr class="hr-stylish-1">
-            
+
             <div class="wrapper">
               <div id="scrollbar-two">
                 <div class="scrollbar">
@@ -1719,9 +1705,9 @@
                           Mashups experiences plug
                         </a>
                       </div>
-                      
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -1739,241 +1725,239 @@
     </div>
     <!-- Main Container end -->
 
-    <script src="{% static 'BlueMoon/js/wysi/wysihtml5-0.3.0.min.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/wysi/bootstrap3-wysihtml5.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
-    
-    <!-- Google Visualization JS -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    
-    <!-- Easy Pie Chart JS -->
-    <script src="{% static 'BlueMoon/js' %}/jquery.easy-pie-chart.js"></script>
-    
-    <!-- Sparkline JS -->
-    <script src="{% static 'BlueMoon/js/sparkline.js' %}"></script>
-    
-    <!-- Tiny Scrollbar JS -->
-    <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
-    
-    <!-- Custom JS -->
-    <script src="{% static 'BlueMoon/js/menu.js' %}"></script>
-    <script src="{% static 'BlueMoon/js' %}/custom.js"></script>
-    
-    <script type="text/javascript">
-      //ScrollUp
-      $(function () {
-        $.scrollUp({
-          scrollName: 'scrollUp', // Element ID
-          topDistance: '300', // Distance from top before showing element (px)
-          topSpeed: 300, // Speed back to top (ms)
-          animation: 'fade', // Fade, slide, none
-          animationInSpeed: 400, // Animation in speed (ms)
-          animationOutSpeed: 400, // Animation out speed (ms)
-          scrollText: 'Top', // Text for element
-          activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-        });
-      });
+    {% block body-js %}
+        <script src="{% static 'BlueMoon/js/wysi/wysihtml5-0.3.0.min.js' %}"></script>
+        <script src="{% static 'BlueMoon/js/wysi/bootstrap3-wysihtml5.js' %}"></script>
 
-      $(document).ready(function () {
-        pie_chart();
-      });
+        <!-- Google Visualization JS -->
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
-      //Animated Pie Charts
-      function pie_chart() {
-        $(function () {
-          //create instance
-          $('.chart1').easyPieChart({
-            animate: 2000,
-            barColor: '#74b749',
-            trackColor: '#dddddd',
-            scaleColor: '#74b749',
-            size: 140,
-            lineWidth: 6,
+        <!-- Easy Pie Chart JS -->
+        <script src="{% static 'BlueMoon/js' %}/jquery.easy-pie-chart.js"></script>
+
+        <!-- Sparkline JS -->
+        <script src="{% static 'BlueMoon/js/sparkline.js' %}"></script>
+
+        <!-- Tiny Scrollbar JS -->
+        <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
+
+        <script src="{% static 'BlueMoon/js/custom.js' %}"></script>
+
+        <script type="text/javascript">
+          //ScrollUp
+          $(function () {
+            $.scrollUp({
+              scrollName: 'scrollUp', // Element ID
+              topDistance: '300', // Distance from top before showing element (px)
+              topSpeed: 300, // Speed back to top (ms)
+              animation: 'fade', // Fade, slide, none
+              animationInSpeed: 400, // Animation in speed (ms)
+              animationOutSpeed: 400, // Animation out speed (ms)
+              scrollText: 'Top', // Text for element
+              activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            });
           });
-          //update instance after 5 sec
-          setTimeout(function () {
-            $('.chart1').data('easyPieChart').update(50);
-          }, 5000);
-          setTimeout(function () {
-            $('.chart1').data('easyPieChart').update(70);
-          }, 10000);
-          setTimeout(function () {
-            $('.chart1').data('easyPieChart').update(30);
-          }, 15000);
-          setTimeout(function () {
-            $('.chart1').data('easyPieChart').update(90);
-          }, 19000);
-          setTimeout(function () {
-            $('.chart1').data('easyPieChart').update(40);
-          }, 32000);
-        });
 
-        $(function () {
-          //create instance
-          $('.chart2').easyPieChart({
-            animate: 2000,
-            barColor: '#ed6d49',
-            trackColor: '#dddddd',
-            scaleColor: '#ed6d49',
-            size: 140,
-            lineWidth: 6,
+          $(document).ready(function () {
+            pie_chart();
           });
-          //update instance after 5 sec
-          setTimeout(function () {
-            $('.chart2').data('easyPieChart').update(90);
-          }, 10000);
-          setTimeout(function () {
-            $('.chart2').data('easyPieChart').update(40);
-          }, 18000);
-          setTimeout(function () {
-            $('.chart2').data('easyPieChart').update(70);
-          }, 28000);
-          setTimeout(function () {
-            $('.chart2').data('easyPieChart').update(50);
-          }, 32000);
-          setTimeout(function () {
-            $('.chart2').data('easyPieChart').update(80);
-          }, 40000);
-        });
 
-        $(function () {
-          //create instance
-          $('.chart3').easyPieChart({
-            animate: 2000,
-            barColor: '#0daed3',
-            trackColor: '#dddddd',
-            scaleColor: '#0daed3',
-            size: 140,
-            lineWidth: 6,
+          //Animated Pie Charts
+          function pie_chart() {
+            $(function () {
+              //create instance
+              $('.chart1').easyPieChart({
+                animate: 2000,
+                barColor: '#74b749',
+                trackColor: '#dddddd',
+                scaleColor: '#74b749',
+                size: 140,
+                lineWidth: 6,
+              });
+              //update instance after 5 sec
+              setTimeout(function () {
+                $('.chart1').data('easyPieChart').update(50);
+              }, 5000);
+              setTimeout(function () {
+                $('.chart1').data('easyPieChart').update(70);
+              }, 10000);
+              setTimeout(function () {
+                $('.chart1').data('easyPieChart').update(30);
+              }, 15000);
+              setTimeout(function () {
+                $('.chart1').data('easyPieChart').update(90);
+              }, 19000);
+              setTimeout(function () {
+                $('.chart1').data('easyPieChart').update(40);
+              }, 32000);
+            });
+
+            $(function () {
+              //create instance
+              $('.chart2').easyPieChart({
+                animate: 2000,
+                barColor: '#ed6d49',
+                trackColor: '#dddddd',
+                scaleColor: '#ed6d49',
+                size: 140,
+                lineWidth: 6,
+              });
+              //update instance after 5 sec
+              setTimeout(function () {
+                $('.chart2').data('easyPieChart').update(90);
+              }, 10000);
+              setTimeout(function () {
+                $('.chart2').data('easyPieChart').update(40);
+              }, 18000);
+              setTimeout(function () {
+                $('.chart2').data('easyPieChart').update(70);
+              }, 28000);
+              setTimeout(function () {
+                $('.chart2').data('easyPieChart').update(50);
+              }, 32000);
+              setTimeout(function () {
+                $('.chart2').data('easyPieChart').update(80);
+              }, 40000);
+            });
+
+            $(function () {
+              //create instance
+              $('.chart3').easyPieChart({
+                animate: 2000,
+                barColor: '#0daed3',
+                trackColor: '#dddddd',
+                scaleColor: '#0daed3',
+                size: 140,
+                lineWidth: 6,
+              });
+              //update instance after 5 sec
+              setTimeout(function () {
+                $('.chart3').data('easyPieChart').update(20);
+              }, 9000);
+              setTimeout(function () {
+                $('.chart3').data('easyPieChart').update(59);
+              }, 20000);
+              setTimeout(function () {
+                $('.chart3').data('easyPieChart').update(38);
+              }, 35000);
+              setTimeout(function () {
+                $('.chart3').data('easyPieChart').update(79);
+              }, 49000);
+              setTimeout(function () {
+                $('.chart3').data('easyPieChart').update(96);
+              }, 52000);
+            });
+
+            $(function () {
+              //create instance
+              $('.chart4').easyPieChart({
+                animate: 2000,
+                barColor: '#ffb400',
+                trackColor: '#dddddd',
+                scaleColor: '#ffb400',
+                size: 140,
+                lineWidth: 6,
+              });
+              //update instance after 5 sec
+              setTimeout(function () {
+                $('.chart4').data('easyPieChart').update(40);
+              }, 6000);
+              setTimeout(function () {
+                $('.chart4').data('easyPieChart').update(67);
+              }, 14000);
+              setTimeout(function () {
+                $('.chart4').data('easyPieChart').update(43);
+              }, 23000);
+              setTimeout(function () {
+                $('.chart4').data('easyPieChart').update(80);
+              }, 36000);
+              setTimeout(function () {
+                $('.chart4').data('easyPieChart').update(66);
+              }, 41000);
+            });
+
+
+            $(function () {
+              //create instance
+              $('.chart5').easyPieChart({
+                animate: 3000,
+                barColor: '#F63131',
+                trackColor: '#dddddd',
+                scaleColor: '#F63131',
+                size: 140,
+                lineWidth: 6,
+              });
+              //update instance after 5 sec
+              setTimeout(function () {
+                $('.chart5').data('easyPieChart').update(30);
+              }, 9000);
+              setTimeout(function () {
+                $('.chart5').data('easyPieChart').update(87);
+              }, 19000);
+              setTimeout(function () {
+                $('.chart5').data('easyPieChart').update(28);
+              }, 27000);
+              setTimeout(function () {
+                $('.chart5').data('easyPieChart').update(69);
+              }, 39000);
+              setTimeout(function () {
+                $('.chart5').data('easyPieChart').update(99);
+              }, 47000);
+            });
+          }
+
+          //Tooltip
+          $('a').tooltip('hide');
+          $('i').tooltip('hide');
+
+          //Tiny Scrollbar
+          $('#scrollbar').tinyscrollbar();
+          $('#scrollbar-one').tinyscrollbar();
+          $('#scrollbar-two').tinyscrollbar();
+          $('#scrollbar-three').tinyscrollbar();
+
+          //Tabs
+          $('#myTab a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+          })
+
+          // SparkLine Graphs-Charts
+          $(function () {
+            $('#unique-visitors').sparkline('html', {
+              type: 'bar',
+              barColor: '#ed6d49',
+              barWidth: 6,
+              height: 30,
+            });
+            $('#monthly-sales').sparkline('html', {
+              type: 'bar',
+              barColor: '#74b749',
+              barWidth: 6,
+              height: 30,
+            });
+            $('#current-balance').sparkline('html', {
+              type: 'bar',
+              barColor: '#ffb400',
+              barWidth: 6,
+              height: 30,
+            });
+            $('#registrations').sparkline('html', {
+              type: 'bar',
+              barColor: '#0daed3',
+              barWidth: 6,
+              height: 30,
+            });
+            $('#site-visits').sparkline('html', {
+              type: 'bar',
+              barColor: '#f63131',
+              barWidth: 6,
+              height: 30,
+            });
           });
-          //update instance after 5 sec
-          setTimeout(function () {
-            $('.chart3').data('easyPieChart').update(20);
-          }, 9000);
-          setTimeout(function () {
-            $('.chart3').data('easyPieChart').update(59);
-          }, 20000);
-          setTimeout(function () {
-            $('.chart3').data('easyPieChart').update(38);
-          }, 35000);
-          setTimeout(function () {
-            $('.chart3').data('easyPieChart').update(79);
-          }, 49000);
-          setTimeout(function () {
-            $('.chart3').data('easyPieChart').update(96);
-          }, 52000);
-        });
+        </script>
 
-        $(function () {
-          //create instance
-          $('.chart4').easyPieChart({
-            animate: 2000,
-            barColor: '#ffb400',
-            trackColor: '#dddddd',
-            scaleColor: '#ffb400',
-            size: 140,
-            lineWidth: 6,
-          });
-          //update instance after 5 sec
-          setTimeout(function () {
-            $('.chart4').data('easyPieChart').update(40);
-          }, 6000);
-          setTimeout(function () {
-            $('.chart4').data('easyPieChart').update(67);
-          }, 14000);
-          setTimeout(function () {
-            $('.chart4').data('easyPieChart').update(43);
-          }, 23000);
-          setTimeout(function () {
-            $('.chart4').data('easyPieChart').update(80);
-          }, 36000);
-          setTimeout(function () {
-            $('.chart4').data('easyPieChart').update(66);
-          }, 41000);
-        });
-
-
-        $(function () {
-          //create instance
-          $('.chart5').easyPieChart({
-            animate: 3000,
-            barColor: '#F63131',
-            trackColor: '#dddddd',
-            scaleColor: '#F63131',
-            size: 140,
-            lineWidth: 6,
-          });
-          //update instance after 5 sec
-          setTimeout(function () {
-            $('.chart5').data('easyPieChart').update(30);
-          }, 9000);
-          setTimeout(function () {
-            $('.chart5').data('easyPieChart').update(87);
-          }, 19000);
-          setTimeout(function () {
-            $('.chart5').data('easyPieChart').update(28);
-          }, 27000);
-          setTimeout(function () {
-            $('.chart5').data('easyPieChart').update(69);
-          }, 39000);
-          setTimeout(function () {
-            $('.chart5').data('easyPieChart').update(99);
-          }, 47000);
-        });
-      }
-
-      //Tooltip
-      $('a').tooltip('hide');
-      $('i').tooltip('hide');
-
-      //Tiny Scrollbar
-      $('#scrollbar').tinyscrollbar();
-      $('#scrollbar-one').tinyscrollbar();
-      $('#scrollbar-two').tinyscrollbar();
-      $('#scrollbar-three').tinyscrollbar();
-
-      //Tabs
-      $('#myTab a').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-      })
-
-      // SparkLine Graphs-Charts
-      $(function () {
-        $('#unique-visitors').sparkline('html', {
-          type: 'bar',
-          barColor: '#ed6d49',
-          barWidth: 6,
-          height: 30,
-        });
-        $('#monthly-sales').sparkline('html', {
-          type: 'bar',
-          barColor: '#74b749',
-          barWidth: 6,
-          height: 30,
-        });
-        $('#current-balance').sparkline('html', {
-          type: 'bar',
-          barColor: '#ffb400',
-          barWidth: 6,
-          height: 30,
-        });
-        $('#registrations').sparkline('html', {
-          type: 'bar',
-          barColor: '#0daed3',
-          barWidth: 6,
-          height: 30,
-        });
-        $('#site-visits').sparkline('html', {
-          type: 'bar',
-          barColor: '#f63131',
-          barWidth: 6,
-          height: 30,
-        });
-      });
-    </script>
+    {% endblock %}
 
   </body>
-</html>
+{% endblock %}
