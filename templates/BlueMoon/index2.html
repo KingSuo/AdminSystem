@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load staticfiles %}<html>
+{% extends 'BlueMoon/base.html' %}{% load staticfiles %}<html>
   <head>
     <title>Blue Moon - Responsive Admin Dashboard</title>
     <meta charset="UTF-8" />
@@ -1739,10 +1739,10 @@
     </div>
     <!-- Main Container end -->
 
-    <script src="{% static 'BlueMoon/js' %}/wysi/wysihtml5-0.3.0.min.js"></script>
+    <script src="{% static 'BlueMoon/js/wysi/wysihtml5-0.3.0.min.js' %}"></script>
     <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
     <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'BlueMoon/js' %}/wysi/bootstrap3-wysihtml5.js"></script>
+    <script src="{% static 'BlueMoon/js/wysi/bootstrap3-wysihtml5.js' %}"></script>
     <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
     
     <!-- Google Visualization JS -->
