@@ -1,28 +1,12 @@
-{% extends 'BlueMoon/base.html' %}{% load staticfiles %}
-  <head>
-    <title>Blue Moon - Responsive Admin Dashboard</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
-    <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
-    <meta name="author" content="Bootstrap Gallery" />
-    <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
-    
-    <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
+{% extends 'BlueMoon/base.html' %}
+{% load staticfiles %}
+
+{% block link %}
     <link href="{% static 'BlueMoon/css/charts-graphs.css' %}" rel="stylesheet">
+{% endblock %}
 
-    <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
-
-    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
-      <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
-    <![endif]-->
-
-  </head>
-
-  <body>
+{% block body %}
+    <body>
 
     <!-- Header Start -->
     <header>
@@ -275,7 +259,7 @@
 
         <!-- Dashboard Wrapper Start -->
         <div class="dashboard-wrapper">
-          
+
           <!-- Left Sidebar Start -->
           <div class="left-sidebar">
 
@@ -342,7 +326,7 @@
 
           <!-- Right Sidebar Start -->
           <div class="right-sidebar">
-            
+
             <div class="wrapper">
               <div id="scrollbar">
                 <div class="scrollbar">
@@ -595,16 +579,16 @@
                           Mashups experiences plug
                         </a>
                       </div>
-                      
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <hr class="hr-stylish-1">
-            
+
             <div class="wrapper">
               <div id="scrollbar-two">
                 <div class="scrollbar">
@@ -767,9 +751,9 @@
                           Mashups experiences plug
                         </a>
                       </div>
-                      
+
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -790,10 +774,10 @@
     <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
     <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
-    
+
     <!-- Tiny Scrollbar JS -->
     <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
-    
+
     <!-- Maps JS -->
     <script src="{% static 'BlueMoon/js/jqvmap/jquery.vmap.js' %}"></script>
     <script src="{% static 'BlueMoon/js/jqvmap/maps/jquery.vmap.russia.js' %}"></script>
@@ -827,4 +811,4 @@
     </script>
 
   </body>
-</html>
+{% endblock %}
