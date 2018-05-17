@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html>{% load staticfiles %}<html>
   <head>
     <title>Blue Moon - Responsive Admin Dashboard</title>
     <meta charset="UTF-8" />
@@ -7,18 +6,18 @@
     <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
     <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
     <meta name="author" content="Bootstrap Gallery" />
-    <link rel="shortcut icon" href="{% static 'BlueMoon/img' %}/favicon.ico">
+    <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
     
-    <link href="{% static 'css' %}/bootstrap.min.css" rel="stylesheet">
-    <link href="{% static 'css' %}/new.css" rel="stylesheet">
-    <link href="{% static 'css' %}/charts-graphs.css" rel="stylesheet">
+    <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
+    <link href="{% static 'BlueMoon/css/charts-graphs.css' %}" rel="stylesheet">
 
-    <link href="{% static 'BlueMoon/fonts' %}/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
 
     <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="{% static 'BlueMoon/js' %}/html5shiv.js"></script>
-      <script src="{% static 'BlueMoon/js' %}/respond.min.js"></script>
+      <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
+      <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
     <![endif]-->
   </head>
 
@@ -27,7 +26,7 @@
     <!-- Header Start -->
     <header>
       <a href="{% url 'index' %}" class="logo">
-        <img src="img/logo.png" alt="Logo"/>
+        <img src="{% static 'BlueMoon/img/logo.png' %}" alt="Logo"/>
       </a>
       <div class="pull-right">
         <ul id="mini-nav" class="clearfix">
@@ -44,7 +43,7 @@
                     <h4 class="modal-title text-danger" id="myModalLabel5">Coding Style </h4>
                   </div>
                   <div class="modal-body">
-                    <img src="img/documentation.png" alt="Esquare Admin">
+                    <img src="{% static 'BlueMoon/img/documentation.png' %}" alt="Esquare Admin">
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -119,7 +118,7 @@
           </li>
           <li class="list-box user-profile">
             <a id="drop7" href="#" role="button" class="dropdown-toggle user-avtar" data-toggle="dropdown">
-              <img src="img/user5.png" alt="Bluemoon User">
+              <img src="{% static 'BlueMoon/img/user5.png' %}" alt="Bluemoon User">
             </a>
             <ul class="dropdown-menu server-activity">
               <li>
@@ -169,13 +168,13 @@
         <div id='cssmenu'>
           <ul>
             <li>
-              <a href='index.html'>
+              <a href="{% url 'index' %}">
                 <i class="fa fa-dashboard"></i>
                 Dashboard
               </a>
             </li>
             <li>
-              <a href="forms.html">
+              <a href="{% url 'forms' %}">">
                 <i class="fa fa-align-justify"></i>
                 Forms
               </a>
@@ -183,18 +182,18 @@
             <li class='active'>
               <a href='#'><i class="fa fa-bar-chart-o"></i>Graphs</a>
               <ul>
-                 <li><a href='flot.html'>Flot Graphs</a></li>
-                 <li><a href='graphs.html'>Google Graph</a></li>
-                 <li><a href='vector-maps.html'>Vector Maps</a></li>
+                 <li><a href="{% url 'flot' %}">Flot Graphs</a></li>
+                 <li><a href="{% url 'graphs' %}">Google Graph</a></li>
+                 <li><a href="{% url 'vector-maps' %}">Vector Maps</a></li>
               </ul>
             </li>
             <li class=''>
               <a href='#'><i class="fa fa-flask"></i>UI Elements</a>
               <ul>
-                 <li><a href='ui-elements.html'>UI Elements</a></li>
-                 <li><a href='panels.html'>Panels</a></li>
-                 <li><a href='notifications.html'>Notifications</a></li>
-                 <li><a href='icons.html'>Icons</a></li>
+                 <li><a href="{% url 'ui-elements' %}">UI Elements</a></li>
+                 <li><a href="{% url 'panels' %}">Panels</a></li>
+                 <li><a href="{% url 'notifications' %}">Notifications</a></li>
+                 <li><a href="{% url 'icons' %}">Icons</a></li>
               </ul>
             </li>
             <li class=''>
@@ -202,13 +201,13 @@
               <ul>
                 <li><a href='#'>Blog</a>
                   <ul>
-                    <li><a href='blog.html'>Blog</a></li>
-                    <li><a href='blog-full-page.html'>Blog Full Page</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'blog-full-page' %}">Blog Full Page</a></li>
                   </ul>
                 </li>
-                <li><a href='edit-profile.html'>Edit Profile</a></li>
-                <li><a href='invoice.html'>Invoice</a></li>
-                <li><a href='default.html'>default</a></li>
+                <li><a href="{% url 'edit-profile' %}">Edit Profile</a></li>
+                <li><a href="{% url 'invoice' %}">Invoice</a></li>
+                <li><a href="{% url 'default' %}">default</a></li>
                 <li><a href='#'>Submenu</a>
                   <ul>
                     <li><a href='#'>Sub Product</a></li>
@@ -216,34 +215,34 @@
                     <li><a href='#'>Sub Product</a></li>
                   </ul>
                 </li>
-                <li><a href='login.html'>Login</a></li>
-                <li><a href='help.html'>Help</a></li>
-                <li><a href='404.html'>404</a></li>
-                <li><a href='500.html'>500</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'help' %}">Help</a></li>
+                <li><a href="{% url '404' %}">404</a></li>
+                <li><a href="{% url '500' %}">500</a></li>
               </ul>
             </li>
             <li class=''>
               <a href='#'><i class="fa fa-table"></i>Tables</a>
               <ul>
-                 <li><a href='tables.html'>Tables</a></li>
-                 <li><a href='pricing.html'>Pricing Plan</a></li>
-                 <li><a href='timeline.html'>Timeline</a></li>
+                 <li><a href="{% url 'tables' %}">Tables</a></li>
+                 <li><a href="{% url 'pricing' %}">Pricing Plan</a></li>
+                 <li><a href="{% url 'timeline' %}">Timeline</a></li>
               </ul>
             </li>
             <li>
-              <a href="media.html">
+              <a href="{% url 'media' %}">
                 <i class="fa fa-picture-o"></i>
                 Media
               </a>
             </li>
             <li class="hidden-sm">
-              <a href="calendar.html">
+              <a href="{% url 'calendar' %}">
                 <i class="fa fa-calendar"></i>
                 Calendar
               </a>
             </li>
             <li class="hidden-sm">
-              <a href="typography.html">
+              <a href="{% url 'typography' %}">
                 <i class="fa fa-font"></i>
                 Typography
               </a>
@@ -906,16 +905,16 @@
     </div>
     <!-- Main Container end -->
 
-    <script src="{% static 'BlueMoon/js' %}/jquery.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/bootstrap.min.js"></script>
-    <script src="{% static 'BlueMoon/js' %}/jquery.scrollUp.js"></script>
+    <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
+    <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
   
     
     <!-- Sparkline JS -->
     <script src="{% static 'BlueMoon/js' %}/sparkline.js"></script>
     
     <!-- Tiny Scrollbar JS -->
-    <script src="{% static 'BlueMoon/js' %}/tiny-scrollbar.js"></script>
+    <script src="{% static 'BlueMoon/js/tiny-scrollbar.js' %}"></script>
     
     <!-- Flot Charts -->
     <script src="{% static 'BlueMoon/js' %}/flot/jquery.flot.js"></script>
@@ -939,7 +938,7 @@
     <script src="{% static 'BlueMoon/js' %}/flot/custom/scatter.js"></script>
 
     <!-- Custom JS -->
-    <script src="{% static 'BlueMoon/js' %}/menu.js"></script>
+    <script src="{% static 'BlueMoon/js/menu.js' %}"></script>
     
     <script type="text/javascript">
       //ScrollUp

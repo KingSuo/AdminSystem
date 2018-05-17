@@ -31,8 +31,12 @@
     <body>
         {% block body-js %}{% endblock %}
 
+        <!-- Custom JS -->
+        <script src="{% static 'BlueMoon/js/menu.js' %}"></script>
+
         <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
         <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
     </body>
 {% endblock %}
 
