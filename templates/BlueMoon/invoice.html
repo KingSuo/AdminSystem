@@ -1,28 +1,8 @@
-{% extends 'BlueMoon/base.html' %}{% load staticfiles %}
-  <head>
-    <title>Blue Moon - Responsive Admin Dashboard</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Blue Moon - Responsive Admin Dashboard" />
-    <meta name="keywords" content="Notifications, Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, bootstrap.gallery" />
-    <meta name="author" content="Bootstrap Gallery" />
-    <link rel="shortcut icon" href="{% static 'BlueMoon/img/favicon.ico' %}">
-    
-    <link href="{% static 'BlueMoon/css/bootstrap.min.css' %}" rel="stylesheet">
+{% extends 'BlueMoon/base.html' %}
+{% load staticfiles %}
 
-    <link href="{% static 'BlueMoon/css/new.css' %}" rel="stylesheet">
-    <!-- Important. For Theming change primary-color variable in main.css  -->
-
-    <link href="{% static 'BlueMoon/fonts/font-awesome.min.css' %}" rel="stylesheet">
-
-    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'BlueMoon/js/html5shiv.js' %}"></script>
-      <script src="{% static 'BlueMoon/js/respond.min.js' %}"></script>
-    <![endif]-->
-  </head>
-
-  <body>
+{% block body %}
+    <body>
 
     <!-- Header Start -->
     <header>
@@ -281,10 +261,10 @@
 
         <!-- Dashboard Wrapper Start -->
         <div class="dashboard-wrapper">
-          
+
           <!-- Left Sidebar Start -->
           <div class="left-sidebar">
-            
+
             <!-- Row Start -->
             <div class="row">
               <div class="col-md-12 col-lg-12">
@@ -579,7 +559,7 @@
                               <th style="width:50%" class="hidden-phone">
                                 Description
                               </th>
-                              
+
                               <th style="width:10%" class="hidden-phone">
                                 Quantity
                               </th>
@@ -720,13 +700,13 @@
                     <i class="fa fa-square-o fa-3x text-success"></i>
                   </span>
                   <h4 class="list-group-item-heading">831</h4>
-                  <p class="list-group-item-text">Due</p>      
+                  <p class="list-group-item-text">Due</p>
                 </a>
               </div>
             </div>
-            
+
             <hr>
-            
+
             <div class="wrapper">
               <ul class="month-income">
                 <li>
@@ -734,7 +714,7 @@
                     <i class="fa fa-html5 fa-lg"></i>
                   </span>
                   <h5>
-                    @srinubasava 
+                    @srinubasava
                     <small class="info-fade">
                       Developer
                     </small>
@@ -748,7 +728,7 @@
                     <i class="fa fa-apple fa-lg"></i>
                   </span>
                   <h5>
-                    @prempillai 
+                    @prempillai
                     <small class="info-fade">
                       Sr. Developer
                     </small>
@@ -762,7 +742,7 @@
                     <i class="fa fa-github fa-lg"></i>
                   </span>
                   <h5>
-                    @arjunurs 
+                    @arjunurs
                     <small class="info-fade">
                       Developer
                     </small>
@@ -776,7 +756,7 @@
                     <i class="fa fa-xing fa-lg"></i>
                   </span>
                   <h5>
-                    @gajjugujju 
+                    @gajjugujju
                     <small class="info-fade">
                       Team Leader
                     </small>
@@ -790,7 +770,7 @@
                     <i class="fa fa-css3 fa-lg"></i>
                   </span>
                   <h5>
-                    @boomer 
+                    @boomer
                     <small class="info-fade">
                       Business
                     </small>
@@ -816,14 +796,10 @@
     </div>
     <!-- Main Container end -->
 
-    <script src="{% static 'BlueMoon/js/jquery.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'BlueMoon/js/jquery.scrollUp.js' %}"></script>
+    {% block body-js %}
+        <script src="{% static 'BlueMoon/js/custom.js' %}"></script>
 
-    <!-- Custom JS -->
-    <script src="{% static 'BlueMoon/js/custom.js' %}"></script>
-    
-    <script type="text/javascript">
+        <script type="text/javascript">
       //ScrollUp
       $(function () {
         $.scrollUp({
@@ -849,5 +825,7 @@
 
     </script>
 
+    {% endblock %}
+
   </body>
-</html>
+{% endblock %}
